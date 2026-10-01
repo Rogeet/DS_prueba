@@ -12,4 +12,5 @@ public class Distance {
      * @throws IllegalArgumentException if the initial layout is invalid (is null ,
      * is ragged , includes characters other than ’.’ or ’A ’)).
      */
+    public static char [][] seatingPeople ( char [][] layout ) {  }
 }

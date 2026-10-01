@@ -90,8 +90,5 @@ class StringCountTest {
         assertEquals(false,StringCount.isPasswordSafe(test5));
         assertEquals(true,StringCount.isPasswordSafe(test6));
 
-
-
-
     }
 }
