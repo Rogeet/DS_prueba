@@ -10,7 +10,7 @@ public class StringCount {
         } else {
             int i, words = 0;
             boolean flag = true;
-            for (i = 0; i <= text.length(); i++) {
+            for (i = 0; i < text.length(); i++) {
                 if (text.charAt(i) != ' ' && flag) {
                     words++;
                     flag = false;
@@ -27,7 +27,7 @@ public class StringCount {
             return 0;
         } else {
             int i, x = 0;
-            for (i = 0; i <= text.length(); i++) {
+            for (i = 0; i < text.length(); i++) {
                 if (text.charAt(i) == c) {
                     x++;
                 }
@@ -41,7 +41,7 @@ public class StringCount {
             return 0;
         } else {
             int i, x = 0;
-            for (i = 0; i <= text.length(); i++) {
+            for (i = 0; i < text.length(); i++) {
                 if (text.toLowerCase().charAt(i) == c || text.toUpperCase().charAt(i) == c) {
                     x++;
                 }
@@ -54,7 +54,7 @@ public class StringCount {
         if (password.length() >= 8) {
             int i;
             boolean x = false, y = false, z = false, k = false;
-            for (i = 0; i <= password.length(); i++) {
+            for (i = 0; i < password.length(); i++) {
                 if (Character.isUpperCase(password.charAt(i))) {
                     x = true;
                 } else if (Character.isLowerCase(password.charAt(i))) {

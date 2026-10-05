@@ -17,8 +17,8 @@ public class Distance {
 
     public static void roundingPeople(char [][] layout, char [][] layoutComodin, int i, int j){
         int k,z, ocupados=0;
-        for(k=Math.max(0,i-1);k<Math.min(layout.length,i+1);k++){
-            for(z=Math.max(0,j-1);z<Math.min(layout[k].length,j+1);z++) {
+        for(k=Math.max(0,i-1);k<Math.min(layout.length,i+2);k++){
+            for(z=Math.max(0,j-1);z<Math.min(layout[k].length,j+2);z++) {
                 if(k!=i || z!=j){
                     if(layout[k][z]=='#'){
                         ++ocupados;;
@@ -35,8 +35,8 @@ public class Distance {
 
     public static void roundingPeople2(char [][] layout, char[][] layoutComodin, int i, int j){
         int k,z, ocupados=0;
-        for(k=Math.max(0,i-1);k<Math.min(layout.length,i+1);k++){
-            for(z=Math.max(0,j-1);z<Math.min(layout[k].length,j+1);z++) {
+        for(k=Math.max(0,i-1);k<Math.min(layout.length,i+2);k++){
+            for(z=Math.max(0,j-1);z<Math.min(layout[k].length,j+2);z++) {
                 if(k!=i || z!=j){
                     if(layout[k][z]=='#'){
                         layoutComodin[i][j]='A';
