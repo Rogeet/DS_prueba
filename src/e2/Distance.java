@@ -15,7 +15,7 @@ public class Distance {
      * is ragged , includes characters other than ’.’ or ’A ’)).
      */
 
-    public static void roundingPeople(char [][] layout, char [][] layoutComodin, int i, int j){
+    private static void roundingPeople(char [][] layout, char [][] layoutComodin, int i, int j){
         int k,z, ocupados=0;
         for(k=Math.max(0,i-1);k<Math.min(layout.length,i+2);k++){
             for(z=Math.max(0,j-1);z<Math.min(layout[k].length,j+2);z++) {
@@ -33,7 +33,7 @@ public class Distance {
         layoutComodin[i][j]='#';
     }
 
-    public static void roundingPeople2(char [][] layout, char[][] layoutComodin, int i, int j){
+    private static void roundingPeople2(char [][] layout, char[][] layoutComodin, int i, int j){
         int k,z, ocupados=0;
         for(k=Math.max(0,i-1);k<Math.min(layout.length,i+2);k++){
             for(z=Math.max(0,j-1);z<Math.min(layout[k].length,j+2);z++) {
@@ -48,7 +48,7 @@ public class Distance {
         layoutComodin[i][j]='#';
     }
 
-    public static boolean comprobacion (char [][] layout, char [][] layoutComodin){
+    private static boolean comprobacion (char [][] layout, char [][] layoutComodin){
         int i,j;
         for(i=0;i<=(layout.length-1);i++){
             for(j=0;(j<=layout[i].length-1);j++){

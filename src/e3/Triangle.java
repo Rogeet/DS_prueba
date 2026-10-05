@@ -1,6 +1,6 @@
 package e3;
 
-public record Triangle(double angle0, double angle1, double angle2) {
+public record Triangle(int angle0, int angle1, int angle2) {
 
     /**
      * Constructs a Triangle object given its three internal angles
@@ -11,7 +11,7 @@ public record Triangle(double angle0, double angle1, double angle2) {
      * @throws IllegalArgumentException if the angles do not sum 180 degrees
      */
     public Triangle {
-        if(angle0+angle1+angle2<180){
+        if(angle0+angle1+angle2!=180){
             throw new IllegalArgumentException("The angles do not sum 180 degrees");
         }
     }
@@ -40,7 +40,7 @@ public record Triangle(double angle0, double angle1, double angle2) {
      * @return True if it is acute , false otherwise
      */
     public boolean isAcute () {
-        if(angle0+angle1+angle2<90) {
+        if(angle0<90 && angle1<90 && angle2<90) {
             return true;
         }else{
             return false;
@@ -109,6 +109,12 @@ public record Triangle(double angle0, double angle1, double angle2) {
 
             Triangle novoTriangulo = (Triangle) o;;
 
+            int minimo = Math.min(angle0,Math.min(angle1,angle2));
+            int maximo = Math.max(angle0,Math.max(angle1,angle2));
+            int minimoO = Math.min(novoTriangulo.angle0,Math.min(novoTriangulo.angle1,novoTriangulo.angle2));
+            int maximoO = Math.max(novoTriangulo.angle0,Math.max(novoTriangulo.angle1,novoTriangulo.angle2));
+
+            return (minimo==minimoO && maximo==maximoO);
         }
     }
 
@@ -119,7 +125,8 @@ public record Triangle(double angle0, double angle1, double angle2) {
      * @return A value that represents the hashcode of the triangle .
      */
     @Override
-    public int hashCode () {/* ... */ }
-}
+    public int hashCode () {
+        return (angle0*angle1*angle2);
+    }
 
 }
